@@ -1146,7 +1146,7 @@ error:
         PyObject *old_msg = PyObject_Str(value);
         const char *old_msg_str = old_msg ? PyUnicode_AsUTF8(old_msg) : "unknown error";
 
-        /* Form the new message 
+        /* Form the new message
            PyErr_Format will clean footprints of errors from PyObject_Str if any */
         PyErr_Format(PyExc_TypeError,
             "math.sign: invalid argument `%.160s` (type '%.80s'). "

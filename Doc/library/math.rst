@@ -230,9 +230,9 @@ Floating point arithmetic
 .. function:: sign(x)
 
    Return the sign of *x*: ``-1`` if *x < 0*, ``0`` if *x == 0*, and ``1`` if *x > 0*.
-   
-   The function delegates to the object's rich comparison operators. This 
-   allows it to work with various numeric types including :class:`int`, 
+
+   The function delegates to the object's rich comparison operators. This
+   allows it to work with various numeric types including :class:`int`,
    :class:`float`, :class:`fractions.Fraction`, and :class:`decimal.Decimal`.
    It is platform-independent, and works with any existing or future scalar type
    that internally supports numeric comparisons.

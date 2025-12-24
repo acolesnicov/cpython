@@ -647,7 +647,7 @@ class MathTests(unittest.TestCase):
                  (r"`\(-1\+1j\)`", -1+1j),
                  (r"`\{-3\.14\}`", {-3.14}),
                 ]
-                
+
         for msg, obj in tests:
             with self.subTest(obj=obj):
                 with self.assertRaisesRegex(TypeError,
