@@ -1134,7 +1134,7 @@ math_sign(PyObject *module, PyObject *x)
 error:
     if (PyErr_Occurred()) {
         PyObject *type, *value, *traceback;
-        /* Extarct the current error (the error flow became empty) */
+        /* Extract the current error */
         PyErr_Fetch(&type, &value, &traceback);
         PyErr_NormalizeException(&type, &value, &traceback);
 
@@ -1146,8 +1146,7 @@ error:
         PyObject *old_msg = PyObject_Str(value);
         const char *old_msg_str = old_msg ? PyUnicode_AsUTF8(old_msg) : "unknown error";
 
-        /* Form the new message
-           PyErr_Format will clean footprints of errors from PyObject_Str if any */
+        /* Format the new message */
         PyErr_Format(PyExc_TypeError,
             "math.sign: invalid argument `%.160s` (type '%.80s'). "
             "Inner error: %.320s",
